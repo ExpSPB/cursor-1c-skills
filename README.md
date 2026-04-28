@@ -6,7 +6,7 @@
 
 Отдельный класс - справочники API прикладных конфигураций (см. раздел «Справочные и утилитарные»). Первый такой скил - `zup-hr-api-reference` для 1С:ЗУП 3.1.
 
-**17 правил** (.mdc) - стандарты кода BSL, антипаттерны, оптимизация запросов, паттерны расширений, тестирование, ревью, выбор моделей, SDD-workflow.
+**21 правило** (.mdc) - стандарты кода BSL, антипаттерны, оптимизация запросов, паттерны расширений, генерация форм, требования EDT, БСП API, тестирование, ревью, выбор моделей, SDD-workflow.
 
 > Адаптация [claude-code-skills-1c](https://github.com/Desko77/claude-code-skills-1c) для Cursor IDE.
 
@@ -217,11 +217,11 @@ Copy-Item -Path commands\* -Destination .cursor\commands\ -Recurse -Force
 | `1c-web-stop` | Остановка веб-сервера |
 | `1c-web-test` | Тестирование 1С через веб-клиент (автоматизация браузера) |
 
-## Правила (17)
+## Правила (21)
 
 | Файл | Описание |
 |------|----------|
-| `1c-coding-standards.mdc` | Стандарты кода BSL: именование, форматирование, запросы, коллекции |
+| `1c-coding-standards.mdc` | Стандарты кода BSL: именование, форматирование, запросы, коллекции, директива РАЗРЕШЕННЫЕ |
 | `anti_patterns.mdc` | Критические антипаттерны: запрос в цикле, точка, O(n^2) |
 | `query-optimization-tips.mdc` | Оптимизация запросов: ВЫРАЗИТЬ, ВТ, индексы, СКД |
 | `async-methods-1c.mdc` | Асинхронные методы (Асинх/Ждать/Обещание) |
@@ -229,13 +229,17 @@ Copy-Item -Path commands\* -Destination .cursor\commands\ -Recurse -Force
 | `form_module_rules.mdc` | Клиент-серверное разделение в модулях форм |
 | `1c-form-reserved-names.mdc` | Зарезервированные имена свойств элементов в модулях форм |
 | `forms_events.mdc` | Привязка обработчиков событий в Form.xml |
+| `forms_generation.mdc` | Генерация и модификация форм 1С через 1c-forms-mcp |
+| `edt-form-xml-requirements.mdc` | Требования EDT к XML-формам (Form.form): extInfo, дефолты полей |
 | `code-review-checklist.mdc` | Чеклист ревью BSL-кода (Critical/High/Medium/Low) |
 | `code-exploration-guide.mdc` | Методология исследования кодовой базы 1С |
 | `testing-patterns.mdc` | Паттерны тестирования: YaXUnit, Vanessa Automation |
-| `1c-mdo-integrity.mdc` | Целостность MDO-файлов: UUID, ссылки |
+| `1c-mdo-integrity.mdc` | Целостность MDO-файлов: UUID, ссылки, ловушки типов String/Number |
+| `external-data-source-mdo.mdc` | Внешние источники данных (ВИД) в формате EDT |
 | `v8unpack-source-structure.mdc` | Структура исходников v8unpack |
 | `refactoring.mdc` | Правила рефакторинга 1С |
 | `routine_assignment_ext_processor.mdc` | Фоновые задания из внешней обработки через БСП |
+| `bsp-profile-rights-api.mdc` | Программная работа с профилями групп доступа БСП: ссылки на ИдентификаторыОбъектовМетаданных |
 | `model-selection.mdc` | Стратегия выбора моделей: Opus/Sonnet/Haiku по типу задачи |
 | `sdd-workflow.mdc` | Specification-Driven Development: 9-фазный workflow разработки |
 
